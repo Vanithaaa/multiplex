@@ -8,14 +8,17 @@ import javax.persistence.Table;
 @Table(name="book_tickets")
 
 public class Booking {
-	@Id
+	public Booking() {
+		super();
+	}
+		@Id
 	private int book_id;
 	private int seats;
-	private int date;
-	private int time;
+	private String date;
+	private String time;
 	private int user_id;
 	private int movie_id;
-	public Booking(int book_id, int seats, int date, int time,int user_id,int movie_id) {
+	public Booking(int book_id, int seats, String date, String time,int user_id,int movie_id) {
 		super();
 		this.book_id = book_id;
 		this.seats = seats;
@@ -58,16 +61,16 @@ public class Booking {
 		this.movie_id = movie_id;
 	}
 
-	public int getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(int date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
-	public int getTime() {
+	public String getTime() {
 		return time;
 	}
-	public void setTime(int time) {
+	public void setTime(String time) {
 		this.time = time;
 	}
 }
